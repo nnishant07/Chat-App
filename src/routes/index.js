@@ -37,3 +37,11 @@ const GeneralApp = Loadable(
   lazy(() => import("../pages/dashboard/GeneralApp")),
 );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));
+
+
+
+// Suspense is a React feature that allows for components
+// to be loaded asynchronously. It is used in conjunction
+// with React.lazy.
+// Suspense is also used to display a loading indicator while the component is being fetched, 
+//or it can be used to render a fallback component if the component fails to load.
