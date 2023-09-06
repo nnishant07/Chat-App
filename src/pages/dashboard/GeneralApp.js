@@ -1,10 +1,11 @@
+import Chats from './Chats';
 import React from "react";
 
 const GeneralApp = () => {
 
   return (
     <>
-      App
+      <Chats />
     </>
   );
 };
