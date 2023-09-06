@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'
 import { styled, alpha, useTheme } from '@mui/material/styles'
 import React from 'react'
 import { ChatList } from '../../data'
-import { SimpleBarStyle } from '../../components/Scrollbar'
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
