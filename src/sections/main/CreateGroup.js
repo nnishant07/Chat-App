@@ -65,7 +65,7 @@ const CreateGroupForm = ({handleClose}) => {
   )
 }
 
-export const CreateGroup = ({ open, handleClose }) => {
+const CreateGroup = ({ open, handleClose }) => {
   return (
     <Dialog fullWidth maxWidth="xs" open={open} TransitionComponent={Transition} keepMounted sx={{ p: 4 }}>
       <DialogTitle sx={{mb: 3}}>Create New Group</DialogTitle>

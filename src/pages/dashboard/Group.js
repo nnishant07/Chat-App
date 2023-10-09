@@ -1,8 +1,8 @@
-import { Stack, Box, Typography, Avatar, Link, IconButton, Divider } from '@mui/material'
+import { Stack, Box, Typography, Link, IconButton, Divider } from '@mui/material'
 import React, { useState } from 'react'
 import { Search, SearchIconWrapper, StyledInputBase } from '../../components/Search'
 import { MagnifyingGlass, Plus } from 'phosphor-react'
-import { useTheme } from '@emotion/react'
+import { useTheme } from "@mui/material/styles";
 import { ChatList } from '../../data'
 import ChatElement from '../../components/ChatElement'
 import CreateGroup from '../../sections/main/CreateGroup'

@@ -18,7 +18,7 @@ const Chats = () => {
     <Box sx={{
       position: "relative",
       width: 320,
-      backgroundColor: theme.palette.mode === "light" ? "#F8FAFF" : theme.palette.background.default,
+      backgroundColor: theme.palette.mode === "light" ? "#F8FAFF" : theme.palette.background,
       boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)"
     }}>
       <Stack p={3} spacing={2} sx={{ height: "100vh" }}>
