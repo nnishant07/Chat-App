@@ -11,7 +11,7 @@ const CallLogElement = ({ online, incoming, missed }) => {
         width: "100%",
         height: 75,
         borderRadius: 1,
-        backgroundColor: (theme) => theme.palette.mode === "light" ? "#fff" : theme.palette.background,
+        backgroundColor: (theme) => theme.palette.mode === "light" ? "#fff" : theme.palette.background.paper,
       }} p={2}>
         <Stack
           direction="row"

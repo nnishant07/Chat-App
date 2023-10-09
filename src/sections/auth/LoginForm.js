@@ -70,7 +70,7 @@ const LoginForm = () => {
                 <Stack alignItems={"flex-end"} sx={{my:2}}>
                     <Link component={RouterLink} to="/auth/reset-password" variant="body2" color="inherit" underline="always">
                         Forgot Password?
-                    </Link>
+                    </Link> 
                 </Stack>
 
                <Button fullWidth color="inherit" size="large" type="submit" variant="contained" sx={{bgcolor:"text.primary",
