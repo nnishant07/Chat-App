@@ -25,6 +25,7 @@ const Call = () => {
         width: 320,
         boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)"
         }}>
+            {/* All the elements of call the box are put into stack for better organisation */}
             <Stack p={3} spacing={2} sx={{maxHeight: "100vh"}}>
                 <Stack>
                     <Typography variant="h5">Call Logs</Typography>
