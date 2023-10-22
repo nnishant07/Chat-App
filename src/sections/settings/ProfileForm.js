@@ -16,6 +16,7 @@ const ProfileForm = () => {
     const ProfileSchema = Yup.object().shape({
         name: Yup.string().required("Name is required"),
         about: Yup.string().required("About is required"),  
+        // nullable basically says that null value is also valid, contradicting the required.
         avatarUrl: Yup.string().required("Avatar is required").nullable(true),
     });
 
@@ -29,7 +30,15 @@ const ProfileForm = () => {
         defaultValues,
     });
 
-    const { reset,watch,control, setError,setValue, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = methods;
+    const { 
+        reset,
+        watch,
+        control, 
+        setError,
+        setValue, 
+        handleSubmit, 
+        formState: { errors, isSubmitting, isSubmitSuccessful } 
+    } = methods;
 
     const values = watch();
 

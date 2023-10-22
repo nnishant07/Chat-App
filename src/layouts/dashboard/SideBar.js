@@ -157,7 +157,8 @@ const SideBar = () => {
                         <Stack spacing={1} px={1}>
                             {Profile_Menu.map((el, idx) => (
                                 <MenuItem onClick={() => {
-
+                                    // Note => Nishant hadn't written this thing earlier
+                                    handleClick();
                                 }}>
                                     <Stack onClick={() => {
                                         navigate(getMenuPath(idx));
