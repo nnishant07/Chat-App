@@ -17,10 +17,13 @@ const CallLogElement = ({ online, incoming, missed }) => {
           direction="row"
           alignItems={"center"}
           justifyContent={"space-between"}>
+
           <Stack
             spacing={2}
             direction="row"
             alignItems={"center"}>
+            {/* To show online badge if online and not if offline, terniary operator used 
+              and style badge not needed when it is offline */}
             {online ? <StyledBadge
               overlap="circular"
               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -29,13 +32,11 @@ const CallLogElement = ({ online, incoming, missed }) => {
             </StyledBadge> :
               <Avatar src={faker.image.avatar()} alt={faker.name.fullName()} />
             }
+
             <Stack direction="column" spacing={0.3}>
               <Typography variant="subtitle2">
                 {faker.name.fullName()}
               </Typography>
-              {/* <Typography variant="caption">
-                            {msg}
-                        </Typography> */}
 
               <Stack direction={"row"} alignItems={"center"} spacing={1}>
                 {incoming ? <ArrowDownLeft color={missed ? "red" : "green"} /> : <ArrowUpRight color={missed ? "red" : "green"} />}
@@ -46,11 +47,10 @@ const CallLogElement = ({ online, incoming, missed }) => {
             </Stack>
 
           </Stack>
+
           <IconButton>
             <Phone color='green' />
           </IconButton>
-
-
 
         </Stack>
       </Box>
@@ -87,10 +87,6 @@ const CallElement = ({ online }) => {
               <Typography variant="subtitle2">
                 {faker.name.fullName()}
               </Typography>
-              {/* <Typography variant="caption">
-                            {msg}
-                        </Typography> */}
-
 
             </Stack>
 

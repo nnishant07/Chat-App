@@ -59,7 +59,7 @@ const Call = () => {
                         <Stack spacing={2.5}>
                             {/* Call Logs */}
                             {CallLogs.map((el) => <CallLogElement {...el} />)}
-                            
+
                         </Stack>
 
                     {/* </SimpleBarStyle> */}
