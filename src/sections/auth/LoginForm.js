@@ -8,9 +8,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Alert, IconButton,Button, InputAdornment, Link, Stack } from '@mui/material';
 import { RHFTextField } from '../../components/hook-form';
 import { Eye, EyeSlash } from 'phosphor-react';
+import { useDispatch } from 'react-redux';
+import { LoginUser } from '../../redux/slices/auth';
 
 const LoginForm = () => {
-
+    const dispatch = useDispatch();
     const [showPassword, setShowPassword] = useState(false);
 
     const LoginSchema = Yup.object().shape({
@@ -33,6 +35,8 @@ const LoginForm = () => {
     const onSubmit = async (data) => {
         try {
             //submit data to backend
+            // * Dispatch is useDispatch of react-reduce
+            dispatch(LoginUser(data));
         }
         catch (error) {
             console.log(error);

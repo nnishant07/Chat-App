@@ -51,19 +51,19 @@ const GeneralApp = Loadable(
   lazy(() => import("../pages/dashboard/GeneralApp")),
 );
 
-const LoginPage =Loadable(
+const LoginPage = Loadable(
   lazy(() => import("../pages/auth/Login")),
 );
 
-const RegisterPage =Loadable(
+const RegisterPage = Loadable(
   lazy(() => import("../pages/auth/Register")),
 );
 
-const ResetPasswordPage =Loadable(
+const ResetPasswordPage = Loadable(
   lazy(() => import("../pages/auth/ResetPassword")),
 );
 
-const NewPasswordPage =Loadable(
+const NewPasswordPage = Loadable(
   lazy(() => import("../pages/auth/NewPassword")),
 );
 

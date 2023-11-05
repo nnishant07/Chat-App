@@ -9,6 +9,8 @@ import { faker } from "@faker-js/faker";
 import useSettings from "../../hooks/useSettings"
 import AntSwitch from "../../components/AntSwitch";
 import { useNavigate } from "react-router-dom";
+import { LogoutUser } from "../../redux/slices/auth";
+import { useDispatch } from "react-redux";
 
 
 const getPath = (index) => {
@@ -34,12 +36,15 @@ const getMenuPath = (index) => {
             return "/settings";
         case 2:
             //TODO => Update token  & set isAuth=false
+            // isn't required now, since we removed the login of idx from the menu
+            // and logout dispatcher will be handled by the isLoggedin state
             return "/auth/login";
         default:
             break;
     }
 }
 const SideBar = () => {
+    const dispatch = useDispatch();
     const theme = useTheme();
 
     const navigate = useNavigate();
@@ -161,7 +166,12 @@ const SideBar = () => {
                                     handleClick();
                                 }}>
                                     <Stack onClick={() => {
-                                        navigate(getMenuPath(idx));
+                                        if (idx === 2) {
+                                            // if idx = 2 => dispatch logout
+                                            dispatch(LogoutUser());
+                                        } else {
+                                            navigate(getMenuPath(idx));
+                                        }
                                     }} sx={{ width: 100 }} direction="row" alignItems="center" justifyContent="space-between">
                                         <span>{el.title}</span>
                                         {el.icon}

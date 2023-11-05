@@ -4,6 +4,10 @@ import { enUS, frFR, zhCN, viVN, arSD } from '@mui/material/locale';
 // routes
 import { PATH_DASHBOARD } from "./routes/paths";
 
+// has to be the one where backend is running
+export const BASE_URL =  'http://localhost:3000';
+export default BASE_URL;
+
 export const defaultSettings = {
   themeMode: "light",
   themeDirection: "ltr",
@@ -57,8 +61,6 @@ export const allLangs = [
 ];
 
 export const defaultLang = allLangs[0]; // English
-
-
 
 // DEFAULT ROOT PATH
 export const DEFAULT_PATH = PATH_DASHBOARD.general.app; // as '/app'
