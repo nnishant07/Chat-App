@@ -53,3 +53,41 @@ export function LogoutUser() {
         dispatch(slice.actions.signOut());
     }
 }
+
+export function ForgotPassword(formValues){
+    return async(dispatch, getState) => {
+        await axios.post("/auth/forgot-password", {
+            ...formValues
+        }, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            // ! could be the source of error
+        }).then(function (response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+}
+
+export function NewPassword(formValues){
+    return async(dispatch, getState) => {
+        await axios.post("/auth/reset-password", {
+            ...formValues
+        }, {
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            // ! could be the source of error
+        }).then(function (response) {
+            console.log(response);
+            dispatch(slice.actions.logIn({
+                isLoggedIn: true,
+                token: response.data.token,
+            }));
+        }).catch(function (error) {
+            console.log(error);
+        })
+    }
+}
